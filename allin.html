@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<input id="result" type="text">
+<br>
+<input value="1" id="one" onclick="clickMotherFucker(1)" type="button">
+<input value="2" id="two" onclick="clickMotherFucker(2)" type="button">
+<input value="3" id="three" onclick="clickMotherFucker(3)" type="button">
+<input value="4" id="four" onclick="clickMotherFucker(4)" type="button">
+<br>
+<input value="5" id="five" onclick="clickMotherFucker(5)" type="button">
+<input value="6" id="six" onclick="clickMotherFucker(6)" type="button">
+<input value="7" id="seven" onclick="clickMotherFucker(7)" type="button">
+<input value="8" id="eight" onclick="clickMotherFucker(8)" type="button">
+<br>
+<input value="9" id="nine" onclick="clickMotherFucker(9)" type="button">
+<input value="+" onclick="clickMother('+')" type="button">
+<input value="-" onclick="clickMother('-')" type="button">
+<input value="*" onclick="clickMother('*')" type="button">
+<br>
+<input value="/" onclick="clickMother('/')" type="button">
+<input value="=" onclick="clickRes()" type="button">
+
+<!-- <input value="Нажми меня" onclick="clickMotherFucker()" type="button"> -->
+<script>
+
+	var action;
+	var first;
+	var second;
+	// document.getElementById("one").value = "AZAZAZ"
+	function clickMotherFucker(number) {
+		document.getElementById("result").value += number	
+	}
+	
+	function clickMother(action) {
+		this.first = document.getElementById("result").value
+		this.action = action
+		document.getElementById("result").value = ''
+	}
+
+	function clickRes() {
+		this.second = document.getElementById("result").value
+		if(this.action === "+")
+			document.getElementById("result").value = Number.parseInt(this.first) + Number.parseInt(this.second)
+		if(this.action === "-")
+			document.getElementById("result").value = Number.parseInt(this.first) - Number.parseInt(this.second)	
+		if(this.action === "/")
+			document.getElementById("result").value = Number.parseInt(this.first) / Number.parseInt(this.second)
+		if(this.action === "*")
+			document.getElementById("result").value = Number.parseInt(this.first) * Number.parseInt(this.second)
+	}
+
+
+console.log(result)
+</script>
+	
+</body>
+</html>
